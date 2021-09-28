@@ -14,4 +14,8 @@ public class Query implements GraphQLQueryResolver {
 	public String secondQuery () {
 		return "Second Query";
 	}
+
+	public String fullName (SampleRequest sampleRequest) {
+		return sampleRequest.getFirstName() + " " + sampleRequest.getLastName()
+	}
 }
