@@ -36,12 +36,12 @@ public class StudentResponse {
 		this.street = student.getAddress().getStreet();
 		this.city = student.getAddress().getCity();
 		
-		if (student.getLearningSubjects() != null) {
-			learningSubjects = new ArrayList<SubjectResponse>();
-			for (Subject subject: student.getLearningSubjects()) {
-				learningSubjects.add(new SubjectResponse(subject));
-			}
-		}
+		// if (student.getLearningSubjects() != null) {
+		// 	learningSubjects = new ArrayList<SubjectResponse>();
+		// 	for (Subject subject: student.getLearningSubjects()) {
+		// 		learningSubjects.add(new SubjectResponse(subject));
+		// 	}
+		// }
 	}
 
 }
