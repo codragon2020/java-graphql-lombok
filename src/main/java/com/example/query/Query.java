@@ -7,6 +7,9 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 @Component
 public class Query implements GraphQLQueryResolver {
 
+	@Autowired
+	StudentService studentService
+
 	public String firstQuery () {
 		return "First Query";
 	}
@@ -17,5 +20,9 @@ public class Query implements GraphQLQueryResolver {
 
 	public String fullName (SampleRequest sampleRequest) {
 		return sampleRequest.getFirstName() + " " + sampleRequest.getLastName()
+	}
+
+	public StudentResponse student (long id) {
+		return new StudentResponse(studentService.getStudentById(id))
 	}
 }
